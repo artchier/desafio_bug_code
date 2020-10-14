@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Desafio2</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="cadastro">Não tem conta? Cadastre-se</string>
+</resources>
