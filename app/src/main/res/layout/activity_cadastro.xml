@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:id="@+id/tela_login">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/blue_background"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:menu="@menu/menu_cadastrar"
+        app:title="@string/cadastrar"
+        app:titleTextColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_mywallet"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/white_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/user"
+        app:boxBackgroundMode="outline"
+        android:hint="@string/user_name"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="@+id/include2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:inputType="textCapWords"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        app:boxBackgroundMode="outline"
+        android:hint="@string/e_mail"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColorHighlight="@color/colorAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        app:boxBackgroundMode="outline"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/password_confirm"
+        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColorHighlight="@color/colorAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_confirm"
+        app:boxBackgroundMode="outline"
+        android:hint="@string/cofirme_senha"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/cadastro"
+        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColorHighlight="@color/colorAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/cadastro"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round2"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/cadastrar"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/snack_layout"
+        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/password_confirm" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snack_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Desafio2</string>
-    <string name="user_name">User Name</string>
-    <string name="password">Password</string>
+    <string name="user_name">Nome do Usuário</string>
+    <string name="password">Senha</string>
     <string name="login">LOGIN</string>
     <string name="cadastro">Não tem conta? Cadastre-se</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="e_mail">E-mail</string>
+    <string name="cofirme_senha">Confirme a senha</string>
+    <string name="entradas">Entradas</string>
+    <string name="gastos">Gastos</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
